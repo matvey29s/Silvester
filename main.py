@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import socket
-
+import threading
 
 
 # Настройки UDP
@@ -144,7 +144,6 @@ def update(frame):
 
 
 # Запуск потока для получения данных
-import threading
 threading.Thread(target=receive_data, daemon=True).start()
 
 # Анимация
